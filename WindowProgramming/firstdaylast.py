@@ -1,4 +1,5 @@
 from tkinter import*
+import random
 
 photoList = [None]*9
 btnList = [None]*9
@@ -13,6 +14,8 @@ window.geometry("210x210")
 for i in range(0,9) :
     photoList[i] = PhotoImage(file = "C:\\Users\\lkh02\\OneDrive\\바탕 화면\\PYTHON실습\\WindowProgramming\\" + photonameList[i] )
     btnList[i] = Button(window, image = photoList[i])
+
+random.shuffle(btnList)
 
 for i in range(0,3) :
     for k in range(0,3) :
